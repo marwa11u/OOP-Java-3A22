@@ -13,11 +13,8 @@ public class ZooManagement {
         System.out.println("number :");
         int number=user_input.nextInt();
 
-
-        System.out.println("last name :");
-        String lastname = user_input.next();
-
-        System.out.println(name+ " " + number + " "+ lastname);
+        z.zooName = name;
+        z.nbCages = number;
         System.out.printf(z.zooName + " comporte " + z.nbCages + " cages.");
 
 
