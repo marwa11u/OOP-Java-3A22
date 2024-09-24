@@ -3,7 +3,7 @@ public class Main {
 
 
         Animal lion=new Animal("OSOD","ASAD",10,true);
-        Animal[] arrayAnimal={lion};
+        
         Zoo myZoo=new Zoo( "de Marwa  ","tunis   ");
 
         Animal ghzayla=new Animal("Ghzayla","ghzayla",15,true);
