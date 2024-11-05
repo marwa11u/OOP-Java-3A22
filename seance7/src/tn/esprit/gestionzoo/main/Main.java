@@ -5,8 +5,10 @@ import tn.esprit.gestionzoo.entities.*;
 public class Main {
     public static void main(String[] args) {
 
-        Animal lion=new Animal("OSOD","ASAD",10,true);
-
+        Animal lion=new Animal("OSOD","ASAD",12,true);
+        Animal lion2=new Animal("2OSOD","aASAD",10,true);
+        Animal lion3=new Animal("3OSOD","bASAD",5,true);
+        Animal lion4=new Animal("4OSOD","cASAD",-8,true);
         Zoo myZoo = new Zoo( "Zoo1  ","kram   ");
         Zoo AnotherZoo = new Zoo( "Zoo2  ","aouina   ");
 
@@ -14,10 +16,26 @@ public class Main {
 
         int animalCount = 0;
 
-        myZoo.addAnimal(lion);
-        myZoo.addAnimal(ghzayla);
-        AnotherZoo.addAnimal(lion);
-        AnotherZoo.addAnimal(lion);
+        try {
+            myZoo.addAnimal(lion);
+            myZoo.addAnimal(lion2);
+            myZoo.addAnimal(lion3);
+            myZoo.addAnimal(ghzayla);
+        } catch (ZooFullException e) {
+            System.out.println("Error: " + e.getMessage());
+
+        }catch (InvalidAgeException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        try {
+            myZoo.addAnimal(lion4);
+        } catch (ZooFullException e) {
+            System.out.println("Error: " + e.getMessage());
+
+        }catch (InvalidAgeException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        /*
         System.out.println(myZoo);
         System.out.println(myZoo.toString());
         lion.displayAnimal();
@@ -82,5 +100,5 @@ public class Main {
         } else {
             System.out.println("The two sharks are not equal.");
         }
-    }
+*/  }
 }
