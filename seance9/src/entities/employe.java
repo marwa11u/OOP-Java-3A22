@@ -44,14 +44,12 @@ public class employe implements Comparable<employe> {
 
     @Override
     public String toString() {
-        return "employee{ id:"+id+"name: "+name+" last name: "+lastname+" department: "+department+" grade: "+grade;
+        return "employee{id:"+id+" name: "+name+" last name: "+lastname+" department: "+department+" grade: "+grade+"}";
     }
 
     @Override
     public int compareTo(employe emp){
         return this.id - emp.id;
     }
-  /*  public String compareTo(String grade){
-        return this.grade.equals(grade);
-    }*/
+
 }

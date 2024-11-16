@@ -3,7 +3,7 @@ package entities;
 import interfaces.IGestion;
 import java.util.*;
 
-public abstract class SocieteArrayList implements IGestion<employe> {
+public class SocieteArrayList implements IGestion<employe> {
     public ArrayList<employe> ArrayEmployees;
 
     public SocieteArrayList(){
@@ -57,7 +57,6 @@ public abstract class SocieteArrayList implements IGestion<employe> {
     @Override
     public void trierEmployeParId(){
         Collections.sort(ArrayEmployees);
-        System.out.println("employees sorted by ID : " + ArrayEmployees);
     }
 
     @Override
